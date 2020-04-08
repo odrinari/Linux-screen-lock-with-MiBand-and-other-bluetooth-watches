@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>313</width>
-    <height>414</height>
+    <height>366</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -65,14 +65,14 @@
    <widget class="QDialogButtonBox" name="DialogButtons">
     <property name="geometry">
      <rect>
-      <x>116</x>
-      <y>320</y>
-      <width>166</width>
+      <x>110</x>
+      <y>260</y>
+      <width>184</width>
       <height>26</height>
      </rect>
     </property>
     <property name="standardButtons">
-     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     <set>QDialogButtonBox::Close|QDialogButtonBox::Save</set>
     </property>
    </widget>
    <widget class="QCheckBox" name="Lock">
@@ -146,37 +146,14 @@
    <widget class="QPushButton" name="FactorySettings">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>320</y>
-      <width>80</width>
+      <x>15</x>
+      <y>260</y>
+      <width>91</width>
       <height>26</height>
      </rect>
     </property>
     <property name="text">
      <string>Сбросить</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="LockOnInputEvent">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>250</y>
-      <width>85</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CheckBox</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>270</y>
-      <width>113</width>
-      <height>26</height>
-     </rect>
     </property>
    </widget>
   </widget>
@@ -193,6 +170,8 @@
     <property name="title">
      <string>&amp;BtUnlock</string>
     </property>
+    <addaction name="help"/>
+    <addaction name="about"/>
    </widget>
    <addaction name="menuBtUnlock"/>
   </widget>
@@ -205,6 +184,16 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="help">
+   <property name="text">
+    <string>Справка</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

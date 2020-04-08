@@ -6,7 +6,7 @@ static int mean=0, all=0, MassiveCount=0, min=0, max=0, NoSignalCount=0;
 static bool ready=false, isLocked=false;
 
 void Task::update(int newresult){
-    qDebug() << newresult << endl;
+    qDebug() <<"newresult: " <<newresult << endl;
     SearchTimer->start(5000);
     if (newresult==-255 && !isLocked){
         NoSignalCount++;
@@ -31,10 +31,9 @@ void Task::update(int newresult){
                 all=all+SearchResults[i];
             }
             mean = (all-SearchResults[min]-SearchResults[max])/2;
-            qDebug() <<"mean "<< mean << endl;
+            qDebug() <<"mean: "<< mean << endl;
             all=0; min=0; max=0;
         }
-        qDebug() <<Unlock <<Lock<< endl;
         if (Unlock && mean>=UnlockThreshold && isLocked){
             qDebug() <<"Разблокировать" << endl;
             system("loginctl unlock-session");
@@ -46,8 +45,8 @@ void Task::update(int newresult){
         }
     }
     if (NoSignalCount==3 && Lock && !isLocked){
-        system("loginctl lock-session");
         qDebug() <<"Нет сигнала, заблокировать" << endl;
+        system("loginctl lock-session");
         ready=false;
         isLocked=true;
         MassiveCount=0;

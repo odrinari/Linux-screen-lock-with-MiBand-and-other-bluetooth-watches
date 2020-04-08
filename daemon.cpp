@@ -1,7 +1,9 @@
+//Кусок кода взят из проекта Damian Kołakowski
+//Ссылка на репозиторий GitHub: https://github.com/damian-kolakowski/intel-edison-playground
+
 #include "daemon.h"
 #include <stdlib.h>
 #include <errno.h>
-//#include <curses.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 #include <sys/socket.h>

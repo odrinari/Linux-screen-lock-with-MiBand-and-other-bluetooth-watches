@@ -9,6 +9,7 @@
 #include <string>
 #include <array>
 #include <QSettings>
+#include <QMessageBox>
 
 namespace Ui {
 class MainWindow;
@@ -29,9 +30,14 @@ private slots:
 
     void on_FactorySettings_clicked();
 
+    void on_help_triggered();
+
+    void on_about_triggered();
+
 private:
     Ui::MainWindow *ui;
     void ReadSettings();
 };
+
 
 #endif // MAINWINDOW_H
