@@ -1,10 +1,28 @@
+//    BtUnlock
+//    Copyright (c) 2020 Drobysh Olesya. All rights reserved.
+//
+//    This file is part of BtUnlock.
+//
+//    BtUnlock is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    BtUnlock is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with BtUnlock.  If not, see <https://www.gnu.org/licenses/>.
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 static QSettings Mysettings(QSettings::NativeFormat, QSettings::UserScope, "btunlock");
 
 void MainWindow::ReadSettings() {
-    ui->MAC->setText(Mysettings.value("main/MAC", "aa").toString());
+    ui->MAC->setText(Mysettings.value("main/MAC", "00:00:00:00:00:00").toString());
     ui->Lock->setChecked(Mysettings.value("features/Lock", false).toBool());
     ui->Unlock->setChecked(Mysettings.value("features/Unlock", false).toBool());
     ui->LockThreshold->setValue(Mysettings.value("main/LockThreshold", -60).toInt());
@@ -18,8 +36,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ReadSettings();
 }
-
-
 
 MainWindow::~MainWindow()
 {
@@ -54,17 +70,18 @@ void MainWindow::on_help_triggered()
 {
     QMessageBox help;
     help.setWindowTitle("Справка");
-    help.setText("Настройка программы: \n   1. Введите MAC адрес вашего BLE устройства \n   2. Поставьте галочки на желаемых режимах работы \n"
-                 "   3. Настройте пороги под себя (Чем больше отрицательное число, тем устройство ближе) \n"
-                 "Для более подробной справки о входящих значениях, советуем запустить процесс через командную строку: btunlock -d \n");
+    help.setText("Настройка программы: \n   1. Введите MAC адрес вашего BLE устройства \n   2. Сохраните и запустите процесс btunlock -d через консоль "
+                 "\n   3. Поэкспериментируйте с входящими значениями при определенных расстояниях между устройством и компьютером."
+                 " \n   4. Проставьте галочки на желаемых режимах работы \n"
+                 "   5. Выставьте пороговые значения и сохраните конфигурацию\n   6. Перезапустите процесс");
     help.exec();
 }
 
 void MainWindow::on_about_triggered()
 {
     QMessageBox about;
-    about.setWindowTitle("Справка");
-    about.setText("Программа: BtUnlock \nВерсия: 0.1 \nДата релиза: 09.04.2020 \nРепозиторий на GitHub: https://github.com/odrinari/btunlock \n"
+    about.setWindowTitle("О программе");
+    about.setText("BtUnlock 0.1 \nРепозиторий на GitHub: https://github.com/odrinari/btunlock \n"
                   "В программе используется алгоритм поиска Bluetooth устройств от Damian Kołakowski \n"
                   "Ссылка на репозиторий GitHub: https://github.com/damian-kolakowski/intel-edison-playground");
     about.exec();

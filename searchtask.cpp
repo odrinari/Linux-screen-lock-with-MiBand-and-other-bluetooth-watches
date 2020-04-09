@@ -1,9 +1,27 @@
+//    BtUnlock
+//    Copyright (c) 2020 Drobysh Olesya. All rights reserved.
+//
+//    This file is part of BtUnlock.
+//
+//    BtUnlock is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    BtUnlock is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with BtUnlock.  If not, see <https://www.gnu.org/licenses/>.
+
 #include <searchtask.h>
 #include <QDebug>
 
 static int SearchResults [4];
 static int mean=0, all=0, MassiveCount=0, min=0, max=0, NoSignalCount=0;
-static bool ready=false, isLocked=false;
+static bool ready=false, isLocked=false, firstResult=false;
 
 void Task::update(int newresult){
     qDebug() <<"newresult: " <<newresult << endl;
@@ -11,6 +29,9 @@ void Task::update(int newresult){
     if (newresult==-255 && !isLocked){
         NoSignalCount++;
     } else if (newresult>-255){
+        if (!firstResult){
+            firstResult=true;
+        }
         NoSignalCount=0;
         SearchResults[MassiveCount]=newresult;
         MassiveCount++;
@@ -44,7 +65,7 @@ void Task::update(int newresult){
             isLocked=true;
         }
     }
-    if (NoSignalCount==3 && Lock && !isLocked){
+    if (firstResult && NoSignalCount==3 && Lock && !isLocked){
         qDebug() <<"Нет сигнала, заблокировать" << endl;
         system("loginctl lock-session");
         ready=false;
