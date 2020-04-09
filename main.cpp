@@ -21,7 +21,7 @@
 #include <QApplication>
 #include <searchtask.h>
 
-static QSettings ReadMySettings("/home/olesya/.config/btunlock.conf", QSettings::NativeFormat);
+static QSettings ReadMySettings( QSettings::NativeFormat, QSettings::UserScope, "btunlock");
 
 int main(int argc, char *argv[])
 {
