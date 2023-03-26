@@ -1,6 +1,7 @@
 # Linux screen lock with MiBand
 
-Hi!\n
+Hi!
+
 This application uses bluetooth and mac address of your MiBand or other wearable watch to lock or unlock screen of the Linux operating system when you leave or return to the computer.
 You can use a small guide on YouTube to install this package!
 
@@ -16,17 +17,18 @@ Link to a youtube video with an example of installation and operation ```https:/
 
 ## Text guide
 
- *Enter the MAC address of your BLE device
+ * Enter the MAC address of your BLE device
  
- *Save and run the btunlock -d process via the console
+ * Save and run the btunlock -d process via the console
  
- *Experiment with incoming values at certain distances between the device and the computer
+ * Experiment with incoming values at certain distances between the device and the computer
  
- *Tick the desired operating modes
+ * Tick the desired operating modes
  
- *Set the thresholds and save the configuration
+ * Set the thresholds and save the configuration
  
- *Restart the process
+ * Restart the process
  
 <hr>
+
 You can find it in the Mi Fit app. To do this, go to the MiFit app, then to ```Profiles > Mi Bank > Bluetooth Address```
