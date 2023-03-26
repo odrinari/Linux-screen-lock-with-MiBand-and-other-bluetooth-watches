@@ -5,7 +5,8 @@
 This application uses bluetooth and mac address of your MiBand or other wearable watch to lock or unlock screen of the Linux operating system when you leave or return to the computer.
 You can use a small guide on YouTube to install this package!
 
-https://user-images.githubusercontent.com/40739802/227791319-f9991a2d-b26d-402c-8976-fc850c44d52e.mp4
+![BtUnlock_-example-of-work-_720p_-_online-video-cutter com_-_2_](https://user-images.githubusercontent.com/40739802/227795137-139ca856-f9eb-4744-92c7-e26ef21baf79.gif)
+
 
 ## Youtube guide
 Link to a youtube video with an example of installation and operation ```https://youtu.be/CxZC94-KWyc```
