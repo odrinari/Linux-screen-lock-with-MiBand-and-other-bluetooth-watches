@@ -14,7 +14,7 @@ Link to a youtube video with an example of installation and operation ```https:/
 
  * Enter the MAC address of your BLE device
  
- * Save and run the btunlock -d process via the console
+ * Save and run the ```btunlock -d``` process via the console (**this is a daemon process, if desired, it will work on the background constantly**)
  
  * Experiment with incoming values at certain distances between the device and the computer
  
@@ -22,7 +22,8 @@ Link to a youtube video with an example of installation and operation ```https:/
  
  * Set the thresholds and save the configuration
  
- * Restart the process
+ * If you have entered new values restart the process ```btunlock -d```
+ 
  
 <hr>
 
