@@ -5,9 +5,9 @@ This application uses bluetooth and mac address of your MiBand or other wearable
 You can use a small guide on YouTube to install this package!
 
 
-
+<hr>
 https://user-images.githubusercontent.com/40739802/227791319-f9991a2d-b26d-402c-8976-fc850c44d52e.mp4
-
+<hr>
 
 
 
@@ -22,5 +22,5 @@ Link to a youtube video with an example of installation and operation ```https:/
  *Tick the desired operating modes
  *Set the thresholds and save the configuration
  *Restart the process
-__________________________________________________________________________________________
+<hr>
 You can find it in the Mi Fit app. To do this, go to the MiFit app, then to ```Profiles > Mi Bank > Bluetooth Address```
