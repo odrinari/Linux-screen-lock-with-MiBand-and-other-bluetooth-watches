@@ -13,7 +13,10 @@ https://user-images.githubusercontent.com/40739802/227791319-f9991a2d-b26d-402c-
 
 
 ## Youtube guide
-Link to a youtube video with an example of installation and operation ```https://youtu.be/CxZC94-KWyc```
+Link to a youtube video with an example of installation and operation
+```
+https://youtu.be/CxZC94-KWyc
+```
 
 ## Text guide
 
