@@ -24,7 +24,9 @@ Link to a youtube video with an example of installation and operation ```https:/
  
  * If you have entered new values restart the process ```btunlock -d```
  
+ * the process starts automatically after logout and reboot with saved settings
  
+
 <hr>
 
 You can find it in the Mi Fit app. To do this, go to the MiFit app, then to ```Profiles > Mi Bank > Bluetooth Address```
