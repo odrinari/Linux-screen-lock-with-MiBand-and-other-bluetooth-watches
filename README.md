@@ -5,9 +5,9 @@ This application uses bluetooth and mac address of your MiBand or other wearable
 You can use a small guide on YouTube to install this package!
 
 
-<hr>
+
 https://user-images.githubusercontent.com/40739802/227791319-f9991a2d-b26d-402c-8976-fc850c44d52e.mp4
-<hr>
+
 
 
 
@@ -17,10 +17,16 @@ Link to a youtube video with an example of installation and operation ```https:/
 ## Text guide
 
  *Enter the MAC address of your BLE device
+ 
  *Save and run the btunlock -d process via the console
+ 
  *Experiment with incoming values at certain distances between the device and the computer
+ 
  *Tick the desired operating modes
+ 
  *Set the thresholds and save the configuration
+ 
  *Restart the process
+ 
 <hr>
 You can find it in the Mi Fit app. To do this, go to the MiFit app, then to ```Profiles > Mi Bank > Bluetooth Address```
