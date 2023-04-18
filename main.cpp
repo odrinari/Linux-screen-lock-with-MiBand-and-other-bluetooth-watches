@@ -15,6 +15,7 @@
 //
 //    You should have received a copy of the GNU General Public License
 //    along with BtUnlock.  If not, see <https://www.gnu.org/licenses/>.
+//test
 
 #include "mainwindow.h"
 #include "daemon.h"
@@ -36,4 +37,5 @@ int main(int argc, char *argv[])
         QSharedPointer<Task> task(new Task(0, &ReadMySettings));
         return a.exec();
     }
+
 }
