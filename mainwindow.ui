@@ -59,7 +59,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Разблокировать при приближении</string>
+     <string>Unlock when approaching</string>
     </property>
    </widget>
    <widget class="QDialogButtonBox" name="DialogButtons">
@@ -85,7 +85,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Блокировать при отдалении</string>
+     <string>Block at a distance</string>
     </property>
    </widget>
    <widget class="QSpinBox" name="LockThreshold">
@@ -114,7 +114,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>MAC адрес устройства</string>
+     <string>MAC address device</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -127,7 +127,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Порог сигнала:</string>
+     <string>Signal threshold:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -140,7 +140,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Порог сигнала:</string>
+     <string>Signal threshold:</string>
     </property>
    </widget>
    <widget class="QPushButton" name="FactorySettings">
@@ -153,7 +153,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Сбросить</string>
+     <string>Reset</string>
     </property>
    </widget>
   </widget>
@@ -186,12 +186,12 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="help">
    <property name="text">
-    <string>Справка</string>
+    <string>Help</string>
    </property>
   </action>
   <action name="about">
    <property name="text">
-    <string>О программе</string>
+    <string>About the program</string>
    </property>
   </action>
  </widget>
